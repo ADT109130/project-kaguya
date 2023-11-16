@@ -5,16 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Scenes/StartScene.unity
+    guid: 8376358d06991974ea7754ae5139611d
+  - enabled: 1
     path: Assets/Scenes/kaguyahouse.unity
     guid: e8915711981c2a748b5e01093a067b32
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 0
-    path: Assets/Bitgem/StylisedWater/URP/Examples/Example-Scene-01.unity
-    guid: fc967860e2508924e943ba0223c2ed3b
   - enabled: 1
-    path: Assets/Scenes/Example-Scene-01.unity
-    guid: 163fc4e22a50af14f9b21d911b524958
+    path: Assets/Scenes/portscene.unity
+    guid: 6be8af0406884514dbc62060b9e5403c
   m_configObjects: {}
