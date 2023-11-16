@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 54147ab9cd34beb41825c3bbbcb3881e
+guid: 3ffedef8c4f0ece43848eb96c7624964
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: MI_JapRyokan_GrassBlades01_Leaf_Mat_Inst
-    second: {fileID: 2100000, guid: ea72bec4a10311b4f9b6987fed820e63, type: 2}
+    second: {fileID: 2100000, guid: b2b08fd7a00572543973fa8cb8138d3b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -40,7 +40,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 3
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -93,7 +93,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.03
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
