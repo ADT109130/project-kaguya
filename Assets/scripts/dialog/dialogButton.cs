@@ -7,18 +7,21 @@ public class dialogButton : MonoBehaviour
 {
     public GameObject dialogui;
     private TextAsset[] dialogbox;
+    private bool isPaused;
+    private bool isMoveing;
 
     // Start is called before the first frame update
     void Start()
     {
         dialogbox = Resources.LoadAll<TextAsset>("kaguyahouse");
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began))
+        isMoveing = TouchCameraRotation.isMoveing;
+        isPaused = pausemanger.isPaused;
+        if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Ended) && isPaused == false && isMoveing == false)
         {
             Ray raycast = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
             RaycastHit raycastHit;

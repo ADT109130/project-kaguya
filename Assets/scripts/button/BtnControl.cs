@@ -17,7 +17,7 @@ public class BtnControl : MonoBehaviour
 
     void Update()
     {
-        if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began))
+        if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Ended))
         {
             Ray raycast = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
             RaycastHit raycastHit;
@@ -26,7 +26,7 @@ public class BtnControl : MonoBehaviour
                 if (raycastHit.collider.CompareTag("leave"))
                 {
                     Debug.Log("leave");
-                    StartCoroutine(loadFade("portscene"));
+                    StartCoroutine(loadFade("portScene"));
                 }
             }
         }
@@ -35,11 +35,11 @@ public class BtnControl : MonoBehaviour
     // Update is called once per frame
     public void menu()
     {
-        StartCoroutine(loadFade("startScene"));
+        StartCoroutine(loadFade("StartScene"));
     }
     public void kaguyahouse()
     {
-        StartCoroutine(loadFade("Kaguyahouse"));
+        StartCoroutine(loadFade("kaguyahouse"));
     }
     public void portscene()
     {

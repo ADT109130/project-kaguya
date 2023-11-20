@@ -9,6 +9,9 @@ public class GyroscopeCameraRotation : BasicCameraRotation
 
     public bool gyroEnabled = true;
     readonly float sensitivity = 50.0f;
+    
+    private bool CanMove = true;
+    private bool gyroON = true;
 
     private Gyroscope gyro;
 
@@ -30,6 +33,17 @@ public class GyroscopeCameraRotation : BasicCameraRotation
     }
     void Update()
     {
+        gyroON = gyroSlider.gyroON;
+        CanMove = DialogManager.CanMove;
+        if (CanMove && gyroON)
+        {
+            gyroEnabled = true;
+        }
+        else
+        {
+            gyroEnabled = false;
+        }
+
         if (gyroEnabled)
         {
             GyroRotation();

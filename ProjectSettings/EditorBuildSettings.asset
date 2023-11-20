@@ -9,9 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScene.unity
     guid: 8376358d06991974ea7754ae5139611d
   - enabled: 1
+    path: Assets/Scenes/introScene.unity
+    guid: 9d7e4d3b2232d5b4396b447de0036560
+  - enabled: 1
+    path: Assets/Scenes/openvideoScene.unity
+    guid: 445bc603dbef71448b4560bd10ee097a
+  - enabled: 1
     path: Assets/Scenes/kaguyahouse.unity
     guid: e8915711981c2a748b5e01093a067b32
   - enabled: 1
-    path: Assets/Scenes/portscene.unity
+    path: Assets/Scenes/portScene.unity
     guid: 6be8af0406884514dbc62060b9e5403c
   m_configObjects: {}

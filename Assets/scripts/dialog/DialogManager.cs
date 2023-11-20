@@ -15,6 +15,7 @@ public class DialogManager : MonoBehaviour
     public float TextSpeed = 0.1f;
 
     bool textfinished;
+    public static bool CanMove = true;
     
     List<string> TextList = new List<string>();
 
@@ -28,6 +29,8 @@ public class DialogManager : MonoBehaviour
     {
         //textLabel.text = TextList[index];
         //index++;
+        CanMove = false;
+        GetTextFromFile(textfile);
         textfinished = true;
         StartCoroutine(SetTextUI());
     }
@@ -38,16 +41,18 @@ public class DialogManager : MonoBehaviour
         if (Input.touchCount == 1 && textfinished)
         {
             Touch touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Began)
+            if (touch.phase == TouchPhase.Ended)
             {
+                
                 //textLabel.text = TextList[index];
                 //index++;
                 StartCoroutine(SetTextUI());
             }
-            if (touch.phase == TouchPhase.Began && index == TextList.Count)
+            if (touch.phase == TouchPhase.Ended && index == TextList.Count)
             {
                 gameObject.SetActive(false);
                 index = 0;
+                CanMove = true;
                 return;
             }
 
@@ -75,8 +80,20 @@ public class DialogManager : MonoBehaviour
 
         switch (TextList[index])
         {
-            case string §Ú:
+            case "½÷©]®V\r":
                 SpeakerName.text = "½÷©]®V";
+                index++;
+                break;
+            case "§Ú\r":
+                SpeakerName.text = "§Ú";
+                index++;
+                break;
+            case "º®¤Ò\r":
+                SpeakerName.text = "º®¤Ò";
+                index++;
+                break;
+            case "¦ÑÁó\r":
+                SpeakerName.text = "¦ÑÁó";
                 index++;
                 break;
         }

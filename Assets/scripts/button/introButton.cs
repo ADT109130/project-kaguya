@@ -5,9 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class introButton : MonoBehaviour
 {
-
-    public GameObject intro1;
-    public GameObject intro2;
+    public Animator Fade;
+    public float fadewaittime = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -18,18 +17,18 @@ public class introButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Ended))
+        {
+            StartCoroutine(loadFade("StartScene"));
+        }
     }
-    public void introcontrol()
+
+    IEnumerator loadFade(string sceneIndex)
     {
-        if (intro1.activeInHierarchy == true)
-        {
-            intro2.SetActive(true);
-            intro1.SetActive(false);
-        }
-        else
-        {
-            SceneManager.LoadScene("startScene");
-        }
+        Fade.SetTrigger("start");
+
+        yield return new WaitForSeconds(fadewaittime);
+
+        SceneManager.LoadScene(sceneIndex);
     }
 }

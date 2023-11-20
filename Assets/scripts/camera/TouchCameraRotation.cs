@@ -6,10 +6,21 @@ public class TouchCameraRotation : BasicCameraRotation
 {
     Vector3 firstPoint;
     float sensitivity = 1.5f;
+    private bool CanMove = true;
+    public static bool isMoveing;
 
     void Update()
     {
-       TouchRotation();
+        CanMove = DialogManager.CanMove;
+        if (CanMove) 
+        {
+            TouchRotation();
+        }
+        /*
+        if (isMoveing) 
+        {
+            StartCoroutine(waitingForMove());
+        }*/
     }
     void TouchRotation()
     {
@@ -30,6 +41,12 @@ public class TouchCameraRotation : BasicCameraRotation
                 RotateUpDown(y * -sensitivity);
 
                 firstPoint = secondPoint;
+
+                isMoveing = true;
+            }
+            if (Input.GetTouch(0).phase == TouchPhase.Ended)
+            {
+                StartCoroutine(waitingForMove());
             }
         }
     }
@@ -45,4 +62,11 @@ public class TouchCameraRotation : BasicCameraRotation
             return 0;
         }
     }
+
+    IEnumerator waitingForMove() 
+    {
+        yield return new WaitForSeconds(0.1f);
+        isMoveing = false;
+    }
+
 }
