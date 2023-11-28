@@ -22,7 +22,7 @@ public class OpenvideoManger : MonoBehaviour
     {
         if (timeCount > videolenth)
         {
-            SceneManager.LoadScene("kaguyahouse");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         
 

@@ -15,9 +15,18 @@ EditorBuildSettings:
     path: Assets/Scenes/openvideoScene.unity
     guid: 445bc603dbef71448b4560bd10ee097a
   - enabled: 1
+    path: Assets/Scenes/openvideoScene2.unity
+    guid: 34fff69e8ad973548a4273d31b83b0e4
+  - enabled: 1
     path: Assets/Scenes/kaguyahouse.unity
     guid: e8915711981c2a748b5e01093a067b32
   - enabled: 1
     path: Assets/Scenes/portScene.unity
     guid: 6be8af0406884514dbc62060b9e5403c
+  - enabled: 1
+    path: Assets/Scenes/robscene.unity
+    guid: e86271a0543e438499d10cee4361d1c1
+  - enabled: 1
+    path: Assets/Scenes/onSeaScene.unity
+    guid: 6337f041063211c46a0747d3ddf73fed
   m_configObjects: {}

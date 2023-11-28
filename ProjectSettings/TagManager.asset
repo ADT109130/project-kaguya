@@ -7,6 +7,15 @@ TagManager:
   - kaguya
   - kaguyahouse
   - leave
+  - fishman1
+  - fishman2
+  - boss1
+  - boss2
+  - portinn1
+  - boat
+  - boss3
+  - fishman3
+  - boat3
   layers:
   - Default
   - TransparentFX

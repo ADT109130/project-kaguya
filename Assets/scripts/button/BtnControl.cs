@@ -49,6 +49,10 @@ public class BtnControl : MonoBehaviour
     {
         StartCoroutine(loadFade("openvideoScene"));
     }
+    public void openvideo2()
+    {
+        StartCoroutine(loadFade("openvideoScene2"));
+    }
     public void intro()
     {
         StartCoroutine(loadFade("introScene"));
